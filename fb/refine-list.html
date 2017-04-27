@@ -20,8 +20,8 @@
 				</div>
 				<div class="panel-body">
 					<div class="form-group">
-						<label for="list">List tài khoản</label>
-						<textarea class="form-control" cols="12" rows="12" id="list" v-model="list" placeholder="Bất kỳ định dạng nào"></textarea>
+						<label for="ancms">List tài khoản</label>
+						<textarea class="form-control" cols="12" rows="12" id="ancms" v-model="ancms" placeholder="Bất kỳ định dạng nào"></textarea>
 					</div>
 					<div class="form-group">
 						<label for="type">Cần lọc</label>
@@ -40,23 +40,6 @@
 </body>
 <script type="text/javascript" src="https://cdn.clgt.io/js/vue/1.0.0/vue.min.js"></script>
 <script type="text/javascript">
-	window.app = new Vue({
-		el: '#app',
-		data: {
-			list: '',
-			type: 'token'
-		},
-		methods: {
-			filters: function(){
-				this.list = [...new Set(this.list.split(/\n/))]
-				.map(a => a
-					.split(/\|/)
-					.find(e => this.type == 'token' ? /^EAA/.test(e) : /^(c_user|Cookie)/.test(e)) || a
-				)
-				.map(e => e.replace(/Cookie:/,''))
-				.join('\n')
-			},
-		}
-	})
+window.app=new Vue({el:"#app",data:{ancms:"",type:"token"},methods:{filters:function(){this.ancms=[...new Set(this.ancms.split(/\n/))].map(a=>a.split(/\|/).find(a=>"token"==this.type?/^EAA/.test(a):/^(c_user|Cookie)/.test(a))||a).map(a=>a.replace(/Cookie:/,"")).join("\n")}}});
 </script>
 </html>
