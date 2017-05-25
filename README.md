@@ -1,4 +1,7 @@
 # clgtApps
+```
+  const [ name ] = new clgtIO()
+```
 apps.clgtIO ( [github](https://github.com/clgtIO/clgt-apps/) )
 
 # Chức năng:
