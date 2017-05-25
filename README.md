@@ -1,4 +1,4 @@
-# clgt-apps
+# clgtApps
 apps.clgtIO ( [github](https://github.com/clgtIO/clgt-apps/) )
 
 # Chức Năng:
