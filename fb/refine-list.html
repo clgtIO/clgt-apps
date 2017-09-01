@@ -3,7 +3,7 @@
 <head>
 	<title>document</title>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="https://cdn.clgt.io/css/bootstrap/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.ancms.systems/css/bootstrap/bootstrap.min.css" />
 	<style type="text/css">
 		.container{
 			margin-top: 20px;
@@ -38,7 +38,7 @@
 		</div>
 	</div>
 </body>
-<script type="text/javascript" src="https://cdn.clgt.io/js/vue/1.0.0/vue.min.js"></script>
+<script type="text/javascript" src="https://cdn.ancms.systems/js/vue/1.0.0/vue.min.js"></script>
 <script type="text/javascript">
 /* owned by clgtIO https://apps.clgt.io/fb/refine-list.html ( published on https://github.com/clgtIO ) */
 window.app=new Vue({el:"#app",data:{ancms:"",type:"token"},methods:{filters:function(){this.ancms=[...new Set(this.ancms.split(/\n/))].map(a=>a.split(/\|/).find(a=>"token"==this.type?/^EAA/.test(a):/^(c_user|Cookie)/.test(a))||a).map(a=>a.replace(/Cookie:/,"")).join("\n")}}});
