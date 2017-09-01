@@ -4,7 +4,7 @@
 <head>
     <title>document</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.clgt.io/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.ancms.systems/css/bootstrap/bootstrap.min.css" />
     <style type="text/css">
     .container {
         margin-top: 20px;
@@ -33,7 +33,7 @@
         </div>
     </div>
 </body>
-<script type="text/javascript" src="https://cdn.clgt.io/js/vue/1.0.0/vue.min.js"></script>
+<script type="text/javascript" src="https://cdn.ancms.systems/js/vue/1.0.0/vue.min.js"></script>
 <script type="text/javascript">
 /* owned by clgtIO https://apps.clgt.io/fb/format-cookies.html ( published on https://github.com/clgtIO ) */
 new Vue({el:"#app",data:{list:""},methods:{filters(){this.list=[...new Set(this.list.split(/\n/))].map((...a)=>[...a].shift().split("|").map(a=>{try{let[b,c]=atob(a.replace(/cookie:(\s?)/i,"")).split("|");if(!/^100/.test(b))throw"";return`c_user=${b};xs=${c}`}catch(b){if(/c_user/.test(a))return btoa(a.split(";").reduce((a,b)=>a.push(b.split("=").pop())&&a,[]).join("|").slice(0,-1))}return a}).join("|")).join("\n")}}})
